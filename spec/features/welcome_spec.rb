@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "visiting home" do 
   it "displays a welcome" do
