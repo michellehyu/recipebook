@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ingredients
 	get 'welcome' => 'welcome#index'
 	get 'home' => 'welcome#index'
 
