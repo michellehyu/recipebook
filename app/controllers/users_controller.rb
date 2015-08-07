@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       #UserMailer.welcome_email(@user).deliver_now
-      redirect_to welcome_url, notice: "You signed up -- good for you!"
+      redirect_to welcome_path, notice: "You signed up -- good for you!"
     else
       render "new"
     end

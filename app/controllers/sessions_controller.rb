@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to welcome_path, notice: "You have successfully signed in.  Your username is #{user.email}."
     else
       flash[:error] = "There was a problem with your login for #{params[:email]}.  Please try again."
-      redirect_to login_url
+      redirect_to login_path
     end
   end
 end
