@@ -13,8 +13,24 @@
   </head>
 
   <body>
-
-    <%= yield %>
-
+    <div class="row">
+      <div class="large-4 columns">
+        <h1>Recipes'R'Us</h1>
+      </div>
+<!--       <div class="large-8 columns">
+        <h3>The best little recipe site out there</h3>
+      </div>
+ -->    </div>
+    <div class="row">
+      <%= yield %>
+    </div>
+    <footer class="row" >
+      <section class="small-3 columns">
+        Copyright 2015
+      </section>
+      <section class="small-9 columns" >
+        This is another section
+      </section>
+    </footer>  
   </body>
 </html>
