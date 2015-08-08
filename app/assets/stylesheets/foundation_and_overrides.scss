@@ -115,6 +115,7 @@ $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
 //$tumeric     : #FFCC00;
+$puke        : #806600;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -141,7 +142,7 @@ $black       : #000000;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 8px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -466,6 +467,7 @@ $black       : #000000;
 // $button-border-width: 0;
 // $button-border-style: solid;
 // $button-bg-color: $primary-color;
+$button-bg-color: $puke;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);

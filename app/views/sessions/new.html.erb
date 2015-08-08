@@ -1,16 +1,19 @@
 <%= flash[:error] %>
-This is where users will be able to log in.  Stop back later!
-<%= form_tag :login  do %>
-  <div >
-    <%= label_tag :email %>
-    <%= text_field_tag :email, nil, class: 'form-control input-lg' %>
-  </div>
-  <div >
-    <%= label_tag :password %>
-    <%= password_field_tag :password, nil  %>
-  </div>
-  <div >
-    <%= submit_tag "Login", class: 'btn-lg btn-primary btn-block' %>
-  </div>
-
-<% end %>
+<div class="row">
+  <section class="large-5 columns"
+    <h4>Please log in:</h4>
+    <%= form_tag :login  do %>
+      <div >
+        <%= label_tag :email %>
+        <%= text_field_tag :email, nil, class: 'form-control input-lg' %>
+      </div>
+      <div >
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil  %>
+      </div>
+      <div >
+        <%= button_tag "Login", class: 'radius btn-lg btn-primary btn-block' %>
+      </div>
+    <% end %>
+  </section>
+</div>

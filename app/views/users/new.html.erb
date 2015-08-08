@@ -1,28 +1,31 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<%= form_for @user do |f| %>
-<% if @user.errors.any? %>
-  <div>
-    <ul>
-      <% for message in @user.errors.full_messages %>
-        <li><%= message %></li>
+<div class="row">
+  <section class="large-5 columns">
+    <h4>Sign Up:</h4>
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-    </ul>
-  </div>
-<% end %>
- <div>
- <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %>
-    <%= f.text_field :password_confirmation %>
-  </div>
-  <div> 
-    <%= f.submit "Submit" %>   
-  </div>
-<% end %>
+      <div> 
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+      </div>
+      <div>
+        <%= f.label :password  %>
+        <%= f.password_field :password %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div> 
+        <%= button_tag "Submit", class: 'radius' %>   
+      </div>
+    <% end %>
+  </section>
+</div>

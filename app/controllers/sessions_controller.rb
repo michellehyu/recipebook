@@ -11,7 +11,12 @@ class SessionsController < ApplicationController
       redirect_to welcome_path, notice: "You have successfully signed in.  Your username is #{user.email}."
     else
       flash[:error] = "There was a problem with your login for #{params[:email]}.  Please try again."
-      redirect_to login_path
+      redirect_to new_user_path
     end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to welcome_path, notice: 'You have been logged out'
   end
 end
