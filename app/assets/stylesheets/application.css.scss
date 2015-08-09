@@ -15,3 +15,20 @@
  *= require foundation_and_overrides
 
  */
+@import "foundation_and_overrides";
+$puke: #806600;
+h1 {color: $monsoon;}
+h2 {color: $jumbo;}
+h3 {color: $jumbo;}
+h4 {color: $oil;}
+h5 {color: $oil;}
+
+a {color: $puke;}
+footer {
+  color: $puke;
+  padding-top: 2em;
+}
+
+.info {
+  background-color: $puke;
+}
