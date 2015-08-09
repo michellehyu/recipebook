@@ -2,15 +2,6 @@
   <section class="large-5 columns">
     <h4>Sign Up:</h4>
     <%= form_for @user do |f| %>
-      <% if @user.errors.any? %>
-        <div>
-          <ul>
-            <% for message in @user.errors.full_messages %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
       <div> 
           <%= f.label :email %>
           <%= f.text_field :email %>

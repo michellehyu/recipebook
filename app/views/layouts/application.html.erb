@@ -13,20 +13,17 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <div class="row alert-box info radius">
+    <% if flash[:notice] || flash[:alert] %>
+      <div class="row alert-box <%= flash[:notice] ? 'info' : 'warning' %> radius">
         <%= render 'layouts/flasher' %>
       </div>
     <% end %>
     <div class="row">
       <div class="large-7 columns">
-        <h1>Recipes'R'Us</h1>
+        <h1>Recipebook</h1>
       </div>
       <%= render 'layouts/nav' %>
-<!--       <div class="large-8 columns">
-        <h3>The best little recipe site out there</h3>
-      </div>
- -->    </div>
+    </div>
     <div class="row">
       <div class="large-12 columns">
         <%= yield %>
