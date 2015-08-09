@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
 
-  let(:user) { FactoryGirl.build(:user) }
+  let(:user) { FactoryGirl.create(:user) }
 
   describe "#create" do
     it "adds a User session" do
