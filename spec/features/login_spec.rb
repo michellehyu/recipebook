@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'logging in' do 
   context 'with a valid username' do
-    let(:user) { FactoryGirl.build(:user) }
+    let(:user) { FactoryGirl.create(:user) }
     before do
       visit "/login"
       fill_in "Email", with: user.email
