@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
- 
+  include SessionsHelper 
+  
   def new
   end
 
@@ -18,5 +19,21 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to welcome_path, notice: 'You have been logged out'
+  end
+
+  def twitter
+    auth = request.env["omniauth.auth"]
+    if current_user
+      current_user.update_attribute(:uid, auth["uid"])
+      flash[:notice] = 'Success!  Twitter account linked.'
+      redirect_to welcome_path
+    elsif 
+      user = User.where(uid: auth['uid']).first || User.from_twitter(auth)
+      if user
+        session[:user_id] = user.id
+        flash[:notice] = 'Success!  You have been logged in through Twitter.'
+        redirect_back_or root_url
+      end
+    end
   end
 end

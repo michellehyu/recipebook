@@ -29,4 +29,22 @@ RSpec.describe SessionsController, type: :controller do
       end
     end
   end
+
+  describe '#twitter' do
+    context 'with valid credentials' do
+      before do
+        OmniAuth.config.add_mock(:twitter, {
+          uid: '12345',
+          info: { nickname: 'test_user' },
+          credentials: { token: 'abc', secret: '123' }
+        })
+        request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter]
+      end 
+
+      it 'signs in a user' do
+        get :twitter
+        expect(signed_in?).to be_true
+      end
+    end
+  end
 end
