@@ -43,7 +43,7 @@ RSpec.describe SessionsController, type: :controller do
 
       it 'signs in a user' do
         get :twitter
-        expect(signed_in?).to be_true
+        expect(signed_in?).to be true
       end
     end
   end
