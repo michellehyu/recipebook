@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
       user = User.where(uid: auth['uid']).first || User.from_twitter(auth)
       if user
         session[:user_id] = user.id
-        flash[:notice] = 'Success!  You have been logged in through Twitter.'
+        flash[:notice] = "Success!  You have been logged in through Twitter as #{user.name}."
         redirect_back_or root_url
       end
     end

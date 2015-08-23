@@ -48,7 +48,7 @@ RSpec.describe SessionsController, type: :controller do
 
       it 'has a flash notice' do
         get :twitter
-        expect(flash[:notice]).to eq 'Success!  You have been logged in through Twitter.'
+        expect(flash[:notice]).to include 'Success!  You have been logged in through Twitter'
       end
 
       it 'responds with http status = success' do
