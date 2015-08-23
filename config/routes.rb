@@ -19,8 +19,10 @@ Rails.application.routes.draw do
 
   #oauth
   get 'auth/twitter/callback', to: 'sessions#twitter', as: :twitter_auth
+  get 'auth/failure', to: 'sessions#failure'
 
   root 'welcome#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

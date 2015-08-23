@@ -36,4 +36,9 @@ class SessionsController < ApplicationController
       end
     end
   end
+
+  def failure
+    flash[:alert] = "Oops!  Something went wrong with your authentication"
+    redirect_back_or root_url
+  end
 end

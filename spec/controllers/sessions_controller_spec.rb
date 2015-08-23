@@ -45,6 +45,26 @@ RSpec.describe SessionsController, type: :controller do
         get :twitter
         expect(signed_in?).to be true
       end
+
+      it 'has a flash notice' do
+        get :twitter
+        expect(flash[:notice]).to eq 'Success!  You have been logged in through Twitter.'
+      end
+
+      it 'responds with http status = success' do
+        expect(response).to have_http_status(:success)
+      end
+    end
+
+    context 'with invalid credentials' do
+      before do
+        OmniAuth.config.mock_auth[:twitter] = :invalid_credentials
+        get :failure
+      end
+
+      it 'has flash alert' do
+        expect(flash[:alert]).to eq "Oops!  Something went wrong with your authentication"
+      end
     end
   end
 end
