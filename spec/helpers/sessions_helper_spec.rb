@@ -11,5 +11,13 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe SessionsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { FactoryGirl.create(:user) }
+
+  before do
+    post :create, email: user.email, password: user.password
+  end
+
+  describe 'signed_in?' do
+    # expect(helper.signed_in?).to be_true
+  end
 end
