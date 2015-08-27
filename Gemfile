@@ -24,6 +24,9 @@ gem 'twitter'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :production do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'	

@@ -14,6 +14,10 @@ describe "creating a user" do
     it 'tells the user they successfully signed up' do
       expect(page).to have_content 'You signed up'
     end
+
+    it 'sends the user a welcome email' do
+      expect('hello')
+    end
   end
 
   context "with bad params" do 
