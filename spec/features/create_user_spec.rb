@@ -16,7 +16,6 @@ describe "creating a user" do
     end
 
     it 'sends the user a welcome email' do
-      expect('hello')
     end
   end
 

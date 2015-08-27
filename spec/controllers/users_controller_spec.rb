@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
 
+  let(:user) {create(:user) }
+  let(:attributes) { attributes_for :user }
+
   describe "GET #new" do
     it "returns http success" do
       get :new
@@ -9,4 +12,11 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe "#create" do
+    it "sends a welcome email" do
+      expect {
+        post :create, user: attributes
+      }.to change(ActionMailer::Base.deliveries, :count).by(1)
+    end
+  end
 end
