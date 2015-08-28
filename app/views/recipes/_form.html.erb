@@ -11,9 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :prep_time%><br>
+    <%= f.text_field :prep_time%>
+    <%= f.label :cook_time%><br>
+    <%= f.text_field :cook_time%> 
+  </div>
+
+  <div class="field">
+    <%= f.label :show %> <%= f.check_box :show %>
+  </div>
+  <div class="field">
+    <%= f.label :ingredients %><br>
+    <%= f.text_field :ingredients %>
+  </div>
+  <div class="field">
+    <%= f.label :steps %><br>
+    <%= f.text_field :steps %>
   </div>
   <div class="actions">
     <%= f.submit %>

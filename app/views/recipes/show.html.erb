@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<h2> <%= @recipe.name %> </h2>
+
 <p>
-  <strong>Name:</strong>
-  <%= @recipe.name %>
+  <strong>Prep Time:</strong> <%= @recipe.prep_time %> min
+  <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
 </p>
 
 <p>
-  <strong>Clicks:</strong>
-  <%= @recipe.clicks %>
+  <strong>Ingredients:</strong><br>
+  <%= @recipe.ingredients %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @recipe.user %>
+  <strong>How to make it:</strong><br>
+  <%= @recipe.steps %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
