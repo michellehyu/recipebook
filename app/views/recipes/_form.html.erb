@@ -10,30 +10,39 @@
       </ul>
     </div>
   <% end %>
+  <p>
+    <div class="row">
+      <h3> Title: </h3>
+      <%= f.text_field :name, :placeholder => "Enter the title of this recipe"%>
+    </div>
+    <div class="row">
+      Do you want other people to see this? <%= f.check_box :show %>
+    </div>
+  </p>
+  <p>
+    <div class="row">
+      <div class="medium-6 columns">
+        <h3> Prep time: </h3>
+        <%= f.text_field :prep_time, :placeholder => "Enter how many minutes it takes to prep this recipe" %>
+      </div>
+      <div class="medium-6 columns">
+        <h3> Cook time: </h3>
+        <%= f.text_field :cook_time, :placeholder => "Enter how many minutes it takes to cook this recipe"%> 
+      </div>
+    </div>
 
-  <div>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :prep_time%><br>
-    <%= f.text_field :prep_time%>
-    <%= f.label :cook_time%><br>
-    <%= f.text_field :cook_time%> 
-  </div>
-
-  <div class="field">
-    <%= f.label :show %> <%= f.check_box :show %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredients %><br>
-    <%= f.text_field :ingredients %>
-  </div>
-  <div class="field">
-    <%= f.label :steps %><br>
-    <%= f.text_field :steps %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row">
+      <h3>Ingredients:</h3>
+      <%= f.text_area(:ingredients, size: '50x10', :placeholder => "Enter ingredients and quantity, e.g. 1 cup of sugar") %>
+    </div>
+    <div class="row">
+      <h3>Instructions:</h3>
+      <%= f.text_area(:steps, size: '50x10', :placeholder => "Enter instructions on how to create this delicious recipe") %>
+    </div>
+  </p>
+  <p>
+    <div class="row">
+      <%= f.submit :class => "button small"%>
+    </div>
+  </p>
 <% end %>

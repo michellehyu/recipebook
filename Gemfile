@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt-ruby'
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 gem 'omniauth-twitter'
 gem 'twitter'

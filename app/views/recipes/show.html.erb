@@ -1,21 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h2> <%= @recipe.name %> </h2>
+<div class="row">
+    <h2> <%= @recipe.name %> </h2>
+  <p>
+    <strong>Prep Time:</strong> <%= @recipe.prep_time %> min <br>
+    <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
+  </p>
 
-<p>
-  <strong>Prep Time:</strong> <%= @recipe.prep_time %> min
-  <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
-</p>
+  <p>
+    <strong>Ingredients:</strong><br>
+    <%= @recipe.ingredients %>
+  </p>
 
-<p>
-  <strong>Ingredients:</strong><br>
-  <%= @recipe.ingredients %>
-</p>
-
-<p>
-  <strong>How to make it:</strong><br>
-  <%= @recipe.steps %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+  <p>
+    <strong>How to make it:</strong><br>
+    <%= @recipe.steps %>
+  </p>
+  <p class="text-right">
+    <%= link_to 'Edit', edit_recipe_path(@recipe), :class => "button small" %> 
+  </p>
+  
+</div>
