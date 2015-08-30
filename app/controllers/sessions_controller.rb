@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to welcome_path, notice: "You have successfully signed in.  Your username is #{user.email}."
     else
       flash[:error] = "There was a problem with your login for #{params[:email]}.  Please try again."
-      redirect_to new_user_path
+      redirect_to login_path
     end
   end
 
@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    flash[:alert] = "Oops!  Something went wrong with your authentication"
+    flash[:error] = "Oops!  Something went wrong with your authentication"
     redirect_back_or root_url
   end
 end

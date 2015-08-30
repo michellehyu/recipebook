@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       UserMailer.welcome_email(@user).deliver_now
       redirect_to welcome_path, notice: "You signed up -- good for you!"
     else
-      flash[:alert] = @user.errors.full_messages
+      flash[:error] = @user.errors.full_messages
       render "new"
     end
   end
