@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <% if flash[:notice] || flash[:alert] %>
+    <% if flash[:notice] || flash[:error] %>
       <div class="row alert-box <%= flash[:notice] ? 'info' : 'warning' %> radius">
         <%= render 'layouts/flasher' %>
       </div>
@@ -34,7 +34,7 @@
         Copyright 2015
       </section>
       <section class="small-5 columns" >
-			<em>cum voluptate coquere (cook with pleasure)</em>
+			A Recipe Repository
       </section>
     </footer>  
   </body>
