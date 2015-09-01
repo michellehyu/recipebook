@@ -15,8 +15,7 @@
       <%else%>
         <% @recipes.each do |recipe| %>
           <tr class="row">
-            <td class="medium-6 columns"><b><%= recipe.name %></b></td>
-            <td class="medium-2 columns text-right"><%= link_to raw('View <i class="fi-eye"></i>'), recipe %> </td>
+            <td class="medium-8 columns"><%= link_to recipe.name, recipe %> </td>
             <td class="medium-2 columns text-right"><%= link_to raw('Edit <i class="fi-pencil"></i>'), edit_recipe_path(recipe) %></td>
             <td class="medium-2 columns text-right"><%= link_to raw('Delete <i class="fi-x"></i>'), recipe,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
