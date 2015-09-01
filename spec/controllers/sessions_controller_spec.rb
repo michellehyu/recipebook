@@ -5,15 +5,14 @@ RSpec.describe SessionsController, type: :controller do
   let(:user) { FactoryGirl.create(:user) }
 
   describe "#create" do
+
     context 'when a user is not already signed in' do
-      it "adds a User session" do
-        post :create, email: user.email, password: user.password
-      end
       it "redirects to welcome page" do
         post :create, email: user.email, password: user.password
         expect(response).to redirect_to(welcome_path)
       end
     end
+
   end
 
   describe '#destroy' do
@@ -63,8 +62,9 @@ RSpec.describe SessionsController, type: :controller do
       end
 
       it 'has flash alert' do
-        expect(flash[:alert]).to eq "Oops!  Something went wrong with your authentication"
+        expect(flash[:error]).to eq "Oops!  Something went wrong with your authentication"
       end
+
     end
   end
 end

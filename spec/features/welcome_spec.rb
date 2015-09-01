@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "visiting home" do 
+describe "visiting welcome" do 
   it "displays a welcome" do
-    visit "/home"
+    visit "/welcome"
     expect(page).to have_content "Welcome"
   end
 end

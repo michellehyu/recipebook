@@ -13,14 +13,14 @@
   </head>
 
   <body>
-    <% if flash[:notice] || flash[:alert] %>
+    <% if flash[:notice] || flash[:error] %>
       <div class="row alert-box <%= flash[:notice] ? 'info' : 'warning' %> radius">
         <%= render 'layouts/flasher' %>
       </div>
     <% end %>
     <div class="row">
       <div class="large-9 columns">
-        <h2><%= link_to "Recipebook", welcome_path %></h2>
+        <h1><%= link_to "Recipebook", welcome_path %></h1>
       </div>
       <%= render 'layouts/nav' %>
     </div>
@@ -34,7 +34,7 @@
         Copyright 2015
       </section>
       <section class="small-5 columns" >
-        This is another section in the footer.
+			A Recipe Repository
       </section>
     </footer>  
   </body>

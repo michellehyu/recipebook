@@ -10,6 +10,8 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @recipe.clicks = @recipe.clicks + 1
+    @recipe.save
   end
 
   # GET /recipes/new
@@ -26,6 +28,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = session[:user_id]
+    @recipe.clicks = 0
 
     respond_to do |format|
       if @recipe.save

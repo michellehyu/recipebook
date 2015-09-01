@@ -2,20 +2,30 @@
 
 <div class="row">
   <table class="medium-12 columns">
+    <thead>
+      <tr class= "row">
+        <td class="medium-12 columns text-right"> <%= link_to raw('Create Recipe <i class="fi-plus"></i>'), new_recipe_path %></td>
+      </tr>
+    </thead>
     <tbody>
-      <% @recipes.each do |recipe| %>
-        <tr class="row">
-          <td class="medium-9 columns"><b><%= recipe.name %></b></td>
-          <td class="medium-1 columns"><%= link_to raw('<i class="fi-eye"></i>'), recipe %> </td>
-          <td class="medium-1 columns"><%= link_to raw('<i class="fi-pencil"></i>'), edit_recipe_path(recipe) %></td>
-          <td class="medium-1 columns"><%= link_to raw('<i class="fi-x"></i>'), recipe,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
+      <% if @recipes.count < 1 %>
+          <tr class="row">
+            <td class="medium-12 columns text-center">You currently don't have any recipes... </td>
+          </tr>
+      <%else%>
+        <% @recipes.each do |recipe| %>
+          <tr class="row">
+            <td class="medium-6 columns"><b><%= recipe.name %></b></td>
+            <td class="medium-2 columns text-right"><%= link_to raw('View <i class="fi-eye"></i>'), recipe %> </td>
+            <td class="medium-2 columns text-right"><%= link_to raw('Edit <i class="fi-pencil"></i>'), edit_recipe_path(recipe) %></td>
+            <td class="medium-2 columns text-right"><%= link_to raw('Delete <i class="fi-x"></i>'), recipe,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      <%end%>
     </tbody>
   </table>
 
 </div>
 
 <div class="row">
-  <%= link_to 'Create Recipe', new_recipe_path, :class => "button tiny"%>
 </div>

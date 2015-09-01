@@ -114,8 +114,9 @@ $tuatara     : #444444;
 $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
-//$tumeric     : #FFCC00;
+$tumeric     : #FFCC00;
 $puke        : #806600;
+$tree        : #009900;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -126,8 +127,8 @@ $puke        : #806600;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: $white;
-// $body-font-color: $jet;
+$body-bg: $tumeric;
+$body-font-color: $white;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -212,7 +213,7 @@ $global-radius: 8px;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: 'Unicorn';
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
@@ -1295,7 +1296,7 @@ $button-bg-color: $puke;
 // $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: $white;
+$table-bg: $white;
 // $table-even-row-bg: $snow;
 
 // These control the table cell border style
@@ -1304,9 +1305,9 @@ $button-bg-color: $puke;
 // $table-border-color: $gainsboro;
 
 // These control the table head styles
-// $table-head-bg: $white-smoke;
+$table-head-bg: $tree;
 // $table-head-font-size: rem-calc(14);
-// $table-head-font-color: $white;
+$table-head-font-color: $white;
 // $table-head-font-weight: $font-weight-bold;
 // $table-head-padding: rem-calc(8 10 10);
 
@@ -1326,7 +1327,7 @@ $button-bg-color: $puke;
 // These control the row padding and font styles
 // $table-row-padding: rem-calc(9 10);
 // $table-row-font-size: rem-calc(14);
-// $table-row-font-color: $jet;
+$table-row-font-color: $tree;
 // $table-line-height: rem-calc(18);
 
 // These are for controlling the layout, display and margin of tables
