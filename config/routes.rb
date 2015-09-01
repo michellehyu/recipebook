@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
-  resources :ingredients
-  resources :steps
   resources :recipes
 	get 'welcome' => 'welcome#index'
 

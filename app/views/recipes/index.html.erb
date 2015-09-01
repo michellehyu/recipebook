@@ -1,31 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipes</h1>
+<div class="row">
+  <table class="medium-12 columns">
+    <tbody>
+      <% @recipes.each do |recipe| %>
+        <tr class="row">
+          <td class="medium-9 columns"><b><%= recipe.name %></b></td>
+          <td class="medium-1 columns"><%= link_to raw('<i class="fi-eye"></i>'), recipe %> </td>
+          <td class="medium-1 columns"><%= link_to raw('<i class="fi-pencil"></i>'), edit_recipe_path(recipe) %></td>
+          <td class="medium-1 columns"><%= link_to raw('<i class="fi-x"></i>'), recipe,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Clicks</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+</div>
 
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.name %></td>
-        <td><%= recipe.clicks %></td>
-        <td><%= recipe.user %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
+<div class="row">
+  <%= link_to 'Create Recipe', new_recipe_path, :class => "button tiny"%>
+</div>
