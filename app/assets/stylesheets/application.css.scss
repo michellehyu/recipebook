@@ -17,16 +17,27 @@
  */
 @import "foundation_and_overrides";
 @import "foundation-icons";
-$mustard: #806600;
-h1 {color: $monsoon;}
-h2 {color: $jumbo;}
-h3 {color: $jumbo;}
-h4 {color: $oil;}
-h5 {color: $oil;}
+@font-face{
+    font-family: 'Unicorn';
+    src: font-url("Unicorn.otf") unquote("format('opentype')");
+    font-weight: normal;
+    font-style: normal;
+}
 
-a {color: $mustard;}
+
+$unicorn_font: 'Unicorn'; 
+
+$mustard: #806600;
+h1 {color: $white;}
+h2 {color: $white; }
+h3 {color: $white;}
+h4 {color: $white;}
+h5 {color: $white;}
+
+a { color: inherit; } 
+
 footer {
-  color: $mustard;
+  color: $white;
   padding-top: 2em;
 }
 

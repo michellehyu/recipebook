@@ -1,23 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-    <h2> <%= @recipe.name %> </h2>
+  <h2> 
+    <strong><%= @recipe.name %></strong>
+    <small><%= link_to raw('<i class="fi-pencil"></i>'), edit_recipe_path(@recipe) %></small>
+  </h2>
+  <br>
   <p>
-    <strong>Prep Time:</strong> <%= @recipe.prep_time %> min <br>
+    <strong>Prep Time:</strong> <%= @recipe.prep_time %> min<br>   
     <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
   </p>
-
+  <br>
   <p>
-    <strong>Ingredients:</strong><br>
-    <%= @recipe.ingredients %>
+  <strong>Ingredients:</strong><br>
+      <%= simple_format(@recipe.ingredients) %>
   </p>
-
+  <br>
   <p>
     <strong>How to make it:</strong><br>
-    <%= @recipe.steps %>
-  </p>
-  <p>
-    <%= link_to 'Edit', edit_recipe_path(@recipe), :class => "button small" %> 
+    <%= simple_format(@recipe.steps) %>
   </p>
   
 </div>
