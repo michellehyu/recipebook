@@ -67,4 +67,11 @@ RSpec.describe SessionsController, type: :controller do
 
     end
   end
+
+  describe 'failure' do
+    it 'creates a flash alert' do
+      get :failure
+      expect(flash[:error]).to eq 'Oops!  Something went wrong with your authentication'
+    end
+  end
 end
