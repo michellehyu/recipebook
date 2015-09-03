@@ -24,5 +24,22 @@ RSpec.describe UsersController, type: :controller do
         post :create, user: attributes 
       }.to change(User, :count).by(1)
     end
+
+    context 'when the user already exists' do
+      before do
+        post :create, user: attributes
+      end
+
+      it "doesn't add the user again" do
+        expect {
+          post :create, user: attributes
+        }.to change(User, :count).by(0)
+      end
+
+      it 'adds an error to the flash' do
+        post :create, user: attributes
+        expect(flash[:error]).to_not be(nil)
+      end
+    end
   end
 end
