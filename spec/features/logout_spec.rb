@@ -21,7 +21,7 @@ describe 'logging out' do
     end
 
     it 'redirects to welcome screen' do
-      expect(page).to have_content 'Welcome!'
+      expect(page).to have_content 'Welcome'
     end
   end
 end

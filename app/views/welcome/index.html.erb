@@ -8,25 +8,27 @@
     </div>
   </div>
   </p>
-  <p> 
-  <div class="row text-center">
-    <h4>No 1. Recipe of the Day </h4>
-    <div class="large-12 columns">
-      <h5><%= @recipe.name %></h5>
-      <p>
-      <strong>Prep Time:</strong> <%= @recipe.prep_time %> min<br>   
-      <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
-      </p>
-      <p>
-      <strong>Ingredients:</strong><br>
-      <%= simple_format(@recipe.ingredients) %>
-      </p>
-      <p>
-      <strong>How to make it:</strong><br>
-      <%= simple_format(@recipe.steps) %>
-      </p>
+  <%if @recipe %>
+    <p> 
+      <div class="row text-center">
+        <h4>No 1. Recipe of the Day </h4>
+        <div class="large-12 columns">
+          <h5><%= @recipe.name %></h5>
+          <p>
+          <strong>Prep Time:</strong> <%= @recipe.prep_time %> min<br>   
+          <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
+          </p>
+          <p>
+          <strong>Ingredients:</strong><br>
+          <%= simple_format(@recipe.ingredients) %>
+          </p>
+          <p>
+          <strong>How to make it:</strong><br>
+          <%= simple_format(@recipe.steps) %>
+          </p>
 
-    </div> 
-  </div>
-  </p>
+        </div> 
+      </div>
+    </p>
+  <% end %>
 </div>
