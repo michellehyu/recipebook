@@ -1,18 +1,32 @@
 <div class="row">
-  <section class="large-7 columns">
-    <h4>Welcome!</h4>
-  </section>
-  <section class="large-5 columns">
-    <div>
-      <h4>About Us </h4>
-      <div class="column">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+  <p>
+  <div class="row primary-color">
+    <div class="large-12 text-center"> 
+      Welcome to Recipebook! The world's smllest recipe repository! <br>
+      Start sharing recipes today by <u><%= link_to "logging in", login_path %></u> to your accout.<br>
+      Happy sharing! Because sharing is Caring!!!
     </div>
-  </section>
+  </div>
+  </p>
+  <p> 
+  <div class="row text-center">
+    <h4>No 1. Recipe of the Day </h4>
+    <div class="large-12 columns">
+      <h5><%= @recipe.name %></h5>
+      <p>
+      <strong>Prep Time:</strong> <%= @recipe.prep_time %> min<br>   
+      <strong>Cook Time:</strong> <%= @recipe.cook_time %> min
+      </p>
+      <p>
+      <strong>Ingredients:</strong><br>
+      <%= simple_format(@recipe.ingredients) %>
+      </p>
+      <p>
+      <strong>How to make it:</strong><br>
+      <%= simple_format(@recipe.steps) %>
+      </p>
+
+    </div> 
+  </div>
+  </p>
 </div>

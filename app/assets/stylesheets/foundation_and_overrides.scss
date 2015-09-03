@@ -117,7 +117,8 @@ $black       : #000000;
 $tumeric     : #FFCC00;
 $puke        : #806600;
 $tree        : #009900;
-
+$tomato      : #C80000;
+$water       : #3399FF;
 // We use these as default colors throughout
 // $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
@@ -216,7 +217,7 @@ $global-radius: 8px;
 $header-font-family: 'Unicorn';
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+$header-font-color: $white;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;

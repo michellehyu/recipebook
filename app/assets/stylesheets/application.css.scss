@@ -20,6 +20,7 @@
 @font-face{
     font-family: 'Unicorn';
     src: font-url("Unicorn.otf") unquote("format('opentype')");
+    src: font-url("Unicorn.ttf") unquote("format('truetype')");
     font-weight: normal;
     font-style: normal;
 }
@@ -28,12 +29,6 @@
 $unicorn_font: 'Unicorn'; 
 
 $mustard: #806600;
-h1 {color: $white;}
-h2 {color: $white; }
-h3 {color: $white;}
-h4 {color: $white;}
-h5 {color: $white;}
-
 a { color: inherit; } 
 
 footer {
