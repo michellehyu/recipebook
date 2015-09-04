@@ -249,6 +249,7 @@ $header-font-color: $white;
 // A general <small> styling
 // $small-font-size: 60%;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-color: $water;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
@@ -1004,7 +1005,7 @@ $form-label-font-color: $white;
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: $oil;
+$panel-font-color: $tree;
 // $panel-font-color-alt: $white;
 
 // $panel-header-adjust: true;
